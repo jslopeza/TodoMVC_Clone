@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Backbone App</title>
+
+	<!-- CSS Links -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="http://todomvc.com/architecture-examples/backbone/bower_components/todomvc-common/base.css">
+</head>
+<body>
+
+	<!------------- CONTENT -------------->
+
+	<section id="todoapp">
+		<header id="header">
+			<h1>todos</h1>
+			<input type="text" id="new-todo" placeholder="what needs to be done?">
+		</header>
+		<section id="main" style="display">
+			<input type="checkbox" id="toggle-all">
+			<label for="toggle-all"></label>
+			<ul id="todo-list"></ul>
+		</section>
+		<footer id="footer" style="display:none;"></footer>
+	</section>
+	<footer id="info">
+		<p>Double-click to edit a todo</p>
+		<p>Writted by <a href="https://github.com/addyosmani">Addy Osmani</a>, Edited by <a href="https://five-tech.com/about.html">Binoy Patel</a></p>
+	</footer>
+
+	<!------------- END CONTENT -------------->
+
+	<!------------- TEMPLATES -------------->
+
+	<!-- item-template -->
+	<script type="text/template" id="item-template">
+
+		<div class="view">
+			<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
+			<label><&- title %></label>
+			<button class="destroy"></button>
+		</div>
+		<input class="edit" value="<%- title %>">
+	</script>
+
+	<!-- stats-template -->
+	<script type="text/template" id="stats-template">
+		<span id="todo-count"><strong><%=remaining %></strong> <%= remaining === 1 ? 'item' : 'items' %> left</span>
+		<ul id="filters">
+			<li><a class="selected" href="#/">All</a></li>
+			<li><a href="#/active">Active</a></li>
+			<li><a href="#/completed">Completed</a></li>
+		</ul>
+
+		<% if(completed) { %>
+		<button id="clear-completed">Clear completed (<%= completed %>)</button>
+		<% } %>
+	</script>
+	<!------------- END TEMPLATES -------------->
+
+	<!-- Javascript -->
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+	<script type="text/javascript" src="js/backbone.localStorage.js"></script>
+	<script type="text/javascript" src="js/todo.js"></script>
+	<script type="text/javascript" src="js/todos.js"></script>
+	<script type="text/javascript" src="js/view/todo-view.js"></script>
+	<script type="text/javascript" src="js/view/app-view.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
