@@ -23,7 +23,7 @@ var app = app || {};
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
 			'blur .edit': 'close',
-			'swipeleft window': 'handleSwipe',
+			'swipeleft document': 'handleSwipe',
 		},
 
 		// The TodoView listens for changes to its model, re-rendering. Since
