@@ -23,7 +23,7 @@ var app = app || {};
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
 			'blur .edit': 'close',
-			'swipeleft h1': 'handleSwipe',
+			'swiperight h1': 'handleSwipe',
 		},
 
 		// The TodoView listens for changes to its model, re-rendering. Since
@@ -133,7 +133,7 @@ var app = app || {};
 			this.model.destroy();
 		},
 		handleSwipe: function(){
-    		console.log('Stop.');
+    		alert('Stop.');
   		}
 	});
 })(jQuery);
