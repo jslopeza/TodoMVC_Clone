@@ -23,7 +23,7 @@ var app = app || {};
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
 			'blur .edit': 'close',
-			'swiperight .destroy':'clear'
+			'swiperight .destroy':'test'
 		},
 
 		// The TodoView listens for changes to its model, re-rendering. Since
@@ -131,6 +131,9 @@ var app = app || {};
 		// Remove the item, destroy the model from *localStorage* and delete its view.
 		clear: function () {
 			this.model.destroy();
+		}
+		test: function(){
+			alert("Swipe");
 		}
 	});
 })(jQuery);
