@@ -14,9 +14,9 @@ var view = new Backbone.View.extend({
   }
 });
 
-view.$('h1').trigger('swipeleft');
+view.$('window').trigger('swipeleft');
 // → "Stop."
-view.$('h1').trigger('tap');
+view.$('window').trigger('tap');
 // → "Hammer time!"
 
 // Access the view's hammer instance
