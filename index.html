@@ -15,7 +15,6 @@
 		<header id="header">
 			<h1>todos</h1>
 			<input type="text" id="new-todo" placeholder="what needs to be done?">
-			<input type="date" id="date" placeholder="Enter Date">
 		</header>
 		<section id="main" style="display">
 			<input type="checkbox" id="toggle-all">
@@ -38,10 +37,11 @@
 
 		<div class="view">
 			<input class="toggle" type="checkbox" <%= completed ? 'checked' : '' %>>
-			<label><%- title %></label>
+			<label><%- title %>&nbsp;<%- date %></label>
 			<button class="destroy"></button>
 		</div>
 		<input class="edit" value="<%- title %>">
+		<input type="date" id="date" value="<%- date ->">
 	</script>
 
 	<!-- stats-template -->
