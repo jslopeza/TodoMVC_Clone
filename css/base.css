@@ -584,3 +584,7 @@ hr {
 	-o-font-smoothing: antialiased;
 	font-smoothing: antialiased;
 }
+.right
+{
+	float: right;
+}
