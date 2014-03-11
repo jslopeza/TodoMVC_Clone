@@ -1,7 +1,7 @@
 var view = new Backbone.View({
   hammerEvents: {
-    'swipeleft h1': 'handleSwipe',
-    'tap h1': 'handleTap'
+    'swipeleft window': 'handleSwipe',
+    'tap window': 'handleTap'
   },
   hammerOptions: {
     tap: true
