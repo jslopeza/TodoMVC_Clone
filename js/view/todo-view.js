@@ -52,6 +52,7 @@ var app = app || {};
 			this.$el.toggleClass('completed', this.model.get('completed'));
 			this.toggleVisible();
 			this.$input = this.$('.edit');
+			this.$date = this.$('.edit');
 			return this;
 		},
 
@@ -76,6 +77,8 @@ var app = app || {};
 		edit: function () {
 			this.$el.addClass('editing');
 			this.$input.focus();
+			this.$date.focus();
+
 		},
 
 		// Close the `"editing"` mode, saving changes to the todo.
