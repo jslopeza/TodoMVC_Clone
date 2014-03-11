@@ -14,11 +14,11 @@ var view = new Backbone.View.extend({
   }
 });
 
-TodoView.$('window').trigger('swipeleft');
+app.TodoView.$('window').trigger('swipeleft');
 // → "Stop."
 //view.$('window').trigger('tap');
 // → "Hammer time!"
 
 // Access the view's hammer instance
-TodoView.hammer();
+app.TodoView.hammer();
 // → view.$el.hammer()
