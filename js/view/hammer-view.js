@@ -1,4 +1,4 @@
-var view = new Backbone.View({
+var view = new Backbone.View.extend({
   hammerEvents: {
     'swipeleft window': 'handleSwipe',
     'tap window': 'handleTap'
