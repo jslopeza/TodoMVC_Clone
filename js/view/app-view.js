@@ -21,7 +21,8 @@ var app = app || {};
 		events: {
 			'keypress #new-todo': 'createOnEnter',
 			'click #clear-completed': 'clearCompleted',
-			'click #toggle-all': 'toggleAllComplete'
+			'click #toggle-all': 'toggleAllComplete',
+			'click .info' : 'testFunc'
 		},
 
 		// At initialization we bind to the relevant events on the `Todos`
@@ -128,6 +129,10 @@ var app = app || {};
 					completed: completed
 				});
 			});
+		},
+
+		testFunc : function(){
+			alert('Working');
 		}
 	});
 })(jQuery);
