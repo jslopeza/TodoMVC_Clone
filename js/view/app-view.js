@@ -19,10 +19,10 @@ var app = app || {};
 
 		// Delegated events for creating new items, and clearing completed ones.
 		events: {
+			'click a' : 'testFunc',
 			'keypress #new-todo': 'createOnEnter',
 			'click #clear-completed': 'clearCompleted',
-			'click #toggle-all': 'toggleAllComplete',
-			'click a' : 'testFunc'
+			'click #toggle-all': 'toggleAllComplete'
 		},
 
 		// At initialization we bind to the relevant events on the `Todos`
@@ -73,6 +73,10 @@ var app = app || {};
 			}
 
 			this.allCheckbox.checked = !remaining;
+		},
+
+		testFunc : function(){
+			alert('Working');
 		},
 
 		// Add a single todo item to the list by creating a view for it, and
@@ -129,10 +133,6 @@ var app = app || {};
 					completed: completed
 				});
 			});
-		},
-
-		testFunc : function(){
-			alert('Working');
 		}
 	});
 })(jQuery);
