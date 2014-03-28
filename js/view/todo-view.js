@@ -23,6 +23,7 @@ var app = app || {};
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
 			'blur .edit': 'close',
+			'touch h1' : 'testfunc'
 		},
 
 		// The TodoView listens for changes to its model, re-rendering. Since
@@ -131,5 +132,9 @@ var app = app || {};
 		clear: function () {
 			this.model.destroy();
 		},
+
+		testfunc : function(){
+			alert('Working!');
+		}
 	});
 })(jQuery);
