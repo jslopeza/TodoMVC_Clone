@@ -21,7 +21,7 @@ var app = app || {};
 		events: {
 			'keypress #new-todo': 'createOnEnter',
 			'click #clear-completed': 'clearCompleted',
-			'click #toggle-all': 'testFunc'
+			'dragright #toggle-all': 'testFunc'
 		},
 
 		// At initialization we bind to the relevant events on the `Todos`
