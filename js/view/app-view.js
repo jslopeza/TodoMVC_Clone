@@ -19,10 +19,9 @@ var app = app || {};
 
 		// Delegated events for creating new items, and clearing completed ones.
 		events: {
-			'click a' : 'testFunc',
 			'keypress #new-todo': 'createOnEnter',
 			'click #clear-completed': 'clearCompleted',
-			'click #toggle-all': 'toggleAllComplete'
+			'click #toggle-all': 'testFunc'
 		},
 
 		// At initialization we bind to the relevant events on the `Todos`
