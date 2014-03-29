@@ -18,12 +18,12 @@ var app = app || {};
 		// The DOM events specific to an item.
 		events: {
 			'click .toggle': 'toggleCompleted',
+			'swiperight label' : 'toggleCompleted',
 			'dblclick label': 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
-			'blur .edit': 'close',
-			'swiperight label' : 'testfunc'
+			'blur .edit': 'close'
 		},
 
 		// The TodoView listens for changes to its model, re-rendering. Since
