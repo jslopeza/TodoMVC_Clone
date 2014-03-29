@@ -588,3 +588,8 @@ hr {
 {
 	float: right;
 }
+
+.ui-loader
+{
+	display: none;
+}
