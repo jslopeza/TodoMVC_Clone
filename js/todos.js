@@ -39,8 +39,8 @@ var app = app || {};
 
 		// Todos are sorted by their original insertion order.
 		comparator: function (todo) {
-			var sorted = c.sortBy(function(m) { 
-				return -m.get('date').getTime() 
+			var sorted = todo.sortBy(function(m) { 
+				return -todo.get('date').getTime() 
 			});
 		}
 	});
