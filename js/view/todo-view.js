@@ -18,7 +18,8 @@ var app = app || {};
 		// The DOM events specific to an item.
 		events: {
 			'click .toggle': 'toggleCompleted',
-			'swiperight label' : 'toggleCompleted',
+			'swiperight label' : 'toggleCompleted', // Swipe Right Gesture
+			'swipeleft label' : 'clear',
 			'dblclick label': 'edit',
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
