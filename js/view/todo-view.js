@@ -24,6 +24,7 @@ var app = app || {};
 			'click .destroy': 'clear',
 			'keypress .edit': 'updateOnEnter',
 			'keydown .edit': 'revertOnEscape',
+			'click label' : 'momentConvert',
 			'blur .edit': 'close'
 		},
 
