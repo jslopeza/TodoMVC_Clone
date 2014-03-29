@@ -134,8 +134,9 @@ var app = app || {};
 			this.model.destroy();
 		},
 
-		testfunc : function(){
-			alert('Working!');
+		momentConvert : function(){
+			var newDate = moment(this.$date);
+			console.log(newDate);
 		}
 	});
 })(jQuery);
