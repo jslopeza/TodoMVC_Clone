@@ -1,4 +1,4 @@
-var app = app || ();
+var app = app || {};
 Backbone.Model.prototype.toJSON = function(){
 return this._parseDates(this.attributes);
 };
