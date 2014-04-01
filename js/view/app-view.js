@@ -21,8 +21,7 @@ var app = app || {};
 		events: {
 			'keypress #new-todo': 'createOnEnter',
 			'click #clear-completed': 'clearCompleted',
-			'click #toggle-all': 'toggleAllComplete',
-			'click #sort' : 'sortByDate'
+			'click #toggle-all': 'toggleAllComplete'
 		},
 
 		// At initialization we bind to the relevant events on the `Todos`
@@ -131,9 +130,5 @@ var app = app || {};
 				});
 			});
 		},
-
-		sortByDate : function(){
-
-		}
 	});
 })(jQuery);
