@@ -21,7 +21,8 @@ var app = app || {};
 		events: {
 			'keypress #new-todo': 'createOnEnter',
 			'click #clear-completed': 'clearCompleted',
-			'click #toggle-all': 'toggleAllComplete'
+			'click #toggle-all': 'toggleAllComplete',
+			'click #sort' : 'sortByDate'
 		},
 
 		// At initialization we bind to the relevant events on the `Todos`
@@ -40,6 +41,7 @@ var app = app || {};
 			this.listenTo(app.todos, 'change:completed', this.filterOne);
 			this.listenTo(app.todos, 'filter', this.filterAll);
 			this.listenTo(app.todos, 'all', this.render);
+			app.todos.on('reset sort', this.render, this);
 
 			// Suppresses 'add' events with {reset: true} and prevents the app view
 			// from being re-rendered for every model. Only renders when the 'reset'
@@ -99,7 +101,7 @@ var app = app || {};
 		newAttributes: function () {
 			return {
 				title: this.$input.val().trim(),
-				date: Date.parse(this.$date.val().trim()),
+				date: moment(Date.parse(this.$date.val().trim())).format('MM/DD/YYYY'),
 				completed: false
 			};
 		},
@@ -110,7 +112,6 @@ var app = app || {};
 			if (e.which === ENTER_KEY && this.$input.val().trim()) {
 				app.todos.create(this.newAttributes());
 				this.$input.val('');
-				location.reload();
 			}
 		},
 
@@ -128,6 +129,10 @@ var app = app || {};
 					completed: completed
 				});
 			});
+		},
+
+		sortByDate : function(){
+			location.reload; 
 		}
 	});
 })(jQuery);
