@@ -112,6 +112,7 @@ var app = app || {};
 			if (e.which === ENTER_KEY && this.$input.val().trim()) {
 				app.todos.create(this.newAttributes());
 				this.$input.val('');
+				location.reload;
 			}
 		},
 
@@ -129,10 +130,6 @@ var app = app || {};
 					completed: completed
 				});
 			});
-		},
-
-		sortByDate : function(){
-			location.reload; 
 		}
 	});
 })(jQuery);
