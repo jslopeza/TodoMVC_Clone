@@ -133,11 +133,6 @@ var app = app || {};
 		// Remove the item, destroy the model from *localStorage* and delete its view.
 		clear: function () {
 			this.model.destroy();
-		},
-
-		momentConvert : function(){
-			var newDate = moment(this.$date);
-			console.log(newDate);
 		}
 	});
 })(jQuery);
