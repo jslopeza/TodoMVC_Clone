@@ -38,7 +38,9 @@ var app = app || {};
 		},
 
 		// Todos are sorted by their original insertion order.
-		comparator: 'date'
+		comparator: function(todo) {
+			return todo.get('date');
+		}
 	});
 
 	// Create our global collection of **Todos**.
