@@ -99,7 +99,7 @@ var app = app || {};
 		newAttributes: function () {
 			return {
 				title: this.$input.val().trim(),
-				date: moment(this.$date.val().trim(),"MM/DD/YYYY"),
+				date: Date.parse(this.$date.val().trim()),
 				completed: false
 			};
 		},
