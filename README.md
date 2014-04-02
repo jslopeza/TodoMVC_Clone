@@ -1,4 +1,4 @@
-TodoMVC_Clone
+TodoMVC
 =============
 
 Check gh-pages branch.
